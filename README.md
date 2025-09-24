@@ -1,2 +1,2 @@
 # efood
-A Front-End React aplication ifood like
+A React aplication ifood like
