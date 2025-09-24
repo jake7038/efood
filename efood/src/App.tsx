@@ -1,13 +1,12 @@
-import { useState } from 'react'
 import { Home } from './pages/home'
 
 function App() {
 
-  return (
+    return (
     <>
-      <Home/>
+        <Home/>
     </>
-  )    
+    )    
 }
 
 export default App

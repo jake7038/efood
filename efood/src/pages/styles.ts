@@ -14,10 +14,5 @@ export const DivFlex = styled.div`
     justify-content: center;
     align-items: center;
     gap:20px;
-        div{
-            text-align: center;
-            width: 472px;
-            height: 398px;
-        }
 
 `

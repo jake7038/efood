@@ -1,4 +1,5 @@
 import * as S from "./styles"
+import type { Item as Itemprops } from "../../types/item"
 
 const Tag = ({ tag }: { tag: string }) => {
     return(
@@ -9,20 +10,18 @@ const Tag = ({ tag }: { tag: string }) => {
 }
 
 
-export const Item = ({foto}: {foto: string}, {nome}: {nome: string}, {texto}: {texto: string}, {classificacao}: {classificacao: string}, {tags}: {tags: string[]}) => {
+export const DivItem = ({ item }: { item: Itemprops }) => {
     return(
         <S.Div>
             <S.DivImg>
-                {tags.map((tag, index) => (
-                    <Tag tag={tag} />
-                ))}
+                
             </S.DivImg>
             <div>
                 <div>
-                    {nome} <div> {classificacao}</div>
+                    {item.nome} <div> {item.nota}</div>
                 </div>
                 <p>
-                    {texto}
+                    {item.descricao}
                 </p>
                 <button>Saiba Mais</button>
             </div>
