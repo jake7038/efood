@@ -1,30 +1,23 @@
 import * as S from "./styles"
 import type { Item as Itemprops } from "../../types/item"
 
-const Tag = ({ tag }: { tag: string }) => {
-    return(
-        <S.retangulo>
-            <p>{tag}</p>
-        </S.retangulo>
-    )
-}
 
 
 export const DivItem = ({ item }: { item: Itemprops }) => {
     return(
         <S.Div>
-            <S.DivImg>
+            <S.DivImg imageUrl={item.url}>
                 
             </S.DivImg>
-            <div>
-                <div>
-                    {item.nome} <div> {item.nota}</div>
-                </div>
+            <S.DivContent>
+                <S.DivFlexTitulo>
+                    <div> {item.nome}  </div> <div> {item.nota+ " "} <img src="src/assets/estrela.png" alt="" /> </div>
+                </S.DivFlexTitulo>
                 <p>
                     {item.descricao}
                 </p>
-                <button>Saiba Mais</button>
-            </div>
+                <button>Saiba mais</button>
+            </S.DivContent>
         </S.Div>
     )
 }

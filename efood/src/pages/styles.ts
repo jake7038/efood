@@ -6,7 +6,8 @@ export const Container = styled.div`
     margin-right: auto;
     margin-left: auto;
     padding-top: 50px;
-    background-color: #FFF8F2;
+    background-color:rgb(252, 222, 196);
+    
 `
 
 export const DivFlex = styled.div`

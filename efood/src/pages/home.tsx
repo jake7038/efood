@@ -6,8 +6,8 @@ import type { Item } from "../types/item"
 
 
 export const Home = () => {
-    const [itens, setItens] = useState<Item[]>([{nome: 'Hioki Sushi', descricao: 'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!', urlParaFoto: 'src/assets/comida1.png', nota: 4.9},
-        {nome: 'Hioki Sushi', descricao: 'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!', urlParaFoto: 'src/assets/comida2.png', nota: 4.7}]);
+    const [itens, setItens] = useState<Item[]>([{nome: 'Hioki Sushi', descricao: 'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!', url: 'src/assets/comida1.png', nota: 4.9 ,tags: (["Destaque da semana", "Japoesa"])},
+        {nome: 'La Dolce Vita Trattoria', descricao: 'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!', url: 'src/assets/comida2.png', nota: 4.7, tags:(["Italiana"])}]);
     
     return(
         <>

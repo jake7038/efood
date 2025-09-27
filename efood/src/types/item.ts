@@ -1,7 +1,7 @@
 export type Item = {
     nome: string;
     descricao: string;
-    urlParaFoto: string;
+    url: string;
     nota: number;
-    
+    tags: string[];
     };
