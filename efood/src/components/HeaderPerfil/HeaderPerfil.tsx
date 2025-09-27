@@ -1,9 +1,16 @@
 import * as S from "./styles"
+import { useNavigate } from 'react-router-dom';
 
 export const HeaderPerfil = () => {
+const nav = useNavigate();
+
+    const navegacao = () => {
+        nav('/');
+    };
+
     return(
         <S.Header>
-            <p>Restaurantes</p>
+            <p onClick={navegacao}>Restaurantes</p>
             <img src="src/assets/logo.png" alt="" />
             <p>0 produtos no carrinho</p>
         </S.Header>

@@ -29,6 +29,7 @@ export const Header = styled.header`
         letter-spacing: 0%;
         text-align: right;
         color: #E66767;
+        cursor: pointer;
     }
 
 `

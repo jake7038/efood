@@ -1,9 +1,17 @@
 import * as S from "./styles"
+import { useNavigate } from 'react-router-dom';
 import type { Item as Itemprops } from "../../types/item"
 
 
 
 export const DivItem = ({ item }: { item: Itemprops }) => {
+    
+    const nav = useNavigate();
+
+    const navegacao = () => {
+        nav('/perfil');
+    };
+    
     return(
         <S.Div>
             <S.DivImg imageUrl={item.url}>
@@ -23,7 +31,7 @@ export const DivItem = ({ item }: { item: Itemprops }) => {
                 <p>
                     {item.descricao}
                 </p>
-                <button>Saiba mais</button>
+                <button onClick={navegacao}>Saiba mais</button>
             </S.DivContent>
         </S.Div>
     )
