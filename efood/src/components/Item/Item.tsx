@@ -7,6 +7,13 @@ export const DivItem = ({ item }: { item: Itemprops }) => {
     return(
         <S.Div>
             <S.DivImg imageUrl={item.url}>
+                <S.DivAbsolute>
+                    {item.tags.map((tag, index) => (
+                        <S.retangulo key={index}>
+                        <p> {tag} </p>
+                        </S.retangulo>
+                    ))}
+                </S.DivAbsolute>
                 
             </S.DivImg>
             <S.DivContent>

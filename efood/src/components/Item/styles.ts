@@ -19,12 +19,41 @@ export const DivImg = styled.div<Props>`
     height: 217px;
     background-image: url(${props => props.imageUrl});
     background-size: cover;
+    background-position: center;
+    position: relative;
     display: flex;
+    align-content: flex-end;
+    justify-content: end;
+    flex-direction: row;
 
 `
+export const  DivAbsolute = styled.div`
+    position: absolute;
+    display: flex;
+    margin-top: 16px;
+    margin-right: 16px;
+    gap: 8px;
+`
+
 export const retangulo = styled.div`
-    width: 121px;
+    height: 26px;
     background-color: #E66767;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    p{
+    margin: 0px;
+    padding: 4px;
+    font-family: Roboto;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #FFEBD9;
+    }
 `
 
 
