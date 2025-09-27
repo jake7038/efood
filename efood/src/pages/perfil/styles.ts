@@ -25,7 +25,7 @@ export const DivFlex = styled.div`
 export const Banner = styled.div`
     min-width: 1366px;
     min-height: 280px;
-    background-image: url("src/assets/apresentacao.png");
+    background-image: url("/assets/apresentacao.png");
     background-repeat: no-repeat;
     background-size: cover;
 `

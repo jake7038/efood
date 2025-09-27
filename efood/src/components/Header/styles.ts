@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Header = styled.header`
     width: 100vw;
-    background-image:  url("src/assets/fundo.png");
+    background-image:  url("/assets/fundo.png");
     color: red;
     top:0;
     display: flex;

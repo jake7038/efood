@@ -3,7 +3,7 @@ import * as S from "./styles"
 export const ItemCarrinho = () => {
     return(
         <S.Div>
-            <img src="src/assets/image 3.png" alt="" />
+            <img src="/assets/image 3.png" alt="" />
             <div>
                 <h2> Pizza Marguerita </h2>
                 <p>

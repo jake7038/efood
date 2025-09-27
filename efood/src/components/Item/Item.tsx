@@ -26,7 +26,7 @@ export const DivItem = ({ item }: { item: Itemprops }) => {
             </S.DivImg>
             <S.DivContent>
                 <S.DivFlexTitulo>
-                    <div> {item.nome}  </div> <div> {item.nota+ " "} <img src="src/assets/estrela.png" alt="" /> </div>
+                    <div> {item.nome}  </div> <div> {item.nota+ " "} <img src="/assets/estrela.png" alt="" /> </div>
                 </S.DivFlexTitulo>
                 <p>
                     {item.descricao}

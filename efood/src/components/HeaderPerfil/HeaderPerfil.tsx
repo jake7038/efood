@@ -11,7 +11,7 @@ const nav = useNavigate();
     return(
         <S.Header>
             <p onClick={navegacao}>Restaurantes</p>
-            <img src="src/assets/logo.png" alt="" />
+            <img src="/assets/logo.png" alt="" />
             <p>0 produtos no carrinho</p>
         </S.Header>
     )
