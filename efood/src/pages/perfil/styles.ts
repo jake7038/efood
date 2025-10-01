@@ -11,13 +11,15 @@ export const Container = styled.div`
 `
 
 
-export const DivFlex = styled.div`
-    display: flex;
+export const DivGrid = styled.div`
+    display: grid;
     justify-content: center;
+    align-content: center;
     align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, auto);
     gap:24px;
     padding-top: 40px;
-    flex-wrap: wrap;
     padding-left: 20%;
     padding-right: 20%;
 `

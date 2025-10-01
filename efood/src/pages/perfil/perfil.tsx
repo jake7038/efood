@@ -13,14 +13,14 @@ export const Perfil = () => {
                 
 
             </S.Banner>
-            <S.DivFlex>
+            <S.DivGrid>
                 <ItemCarrinho/>
                 <ItemCarrinho/>
                 <ItemCarrinho/>
                 <ItemCarrinho/>
                 <ItemCarrinho/>
                 <ItemCarrinho/>
-            </S.DivFlex>
+            </S.DivGrid>
         </S.Container>
         <Footer/>
     </>

@@ -8,9 +8,8 @@ export const Div = styled.div`
     width: 472px;
     height: 398px;
     background-color: #FFFFFF;
-    border-width: 5px;
-    border-style: dashed;
-    border-color: #E66767;
+    display: flex;
+    flex-direction: column;
 `
 
 
@@ -61,8 +60,13 @@ export const DivContent = styled.div`
     padding: 6px;
     padding-left: 12px;
     font-size: 14px;
+    flex: 1;
     font-family: 'Roboto';
     color: #E66767;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E66767;
+    border-top: none;
     img{
         position: relative;
         top: 1.5px;

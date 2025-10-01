@@ -18,11 +18,11 @@ export const Home = () => {
         <>
             <Header/>
             <S.Container>
-                <S.DivFlex>
+                <S.DivGrid>
                 {itens.map((item, index) => (
                     <DivItem key={index} item = {item} />
                 ))}
-                </S.DivFlex>
+                </S.DivGrid>
             </S.Container>
             <Footer/>
         </>

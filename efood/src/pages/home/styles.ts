@@ -11,12 +11,12 @@ export const Container = styled.div`
     
 `
 
-export const DivFlex = styled.div`
-    padding-left: 10%;
-    padding-right: 10%;
-    display: flex;
+export const DivGrid = styled.div`
+    display: grid;
     justify-content: center;
+    align-content: center;
     align-items: center;
-    gap:30px 40px;
-    flex-wrap: wrap;
+    justify-items: center;
+    grid-template-columns: repeat(2, auto);
+    gap: 30px 50px;
 `
