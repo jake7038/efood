@@ -7,7 +7,7 @@ export const Container = styled.div`
     padding-left: auto;
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color:rgb(252, 222, 196);
+    background-color: #FFF8F2;
     
 `
 

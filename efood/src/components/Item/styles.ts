@@ -73,12 +73,12 @@ export const DivContent = styled.div`
     }
     button{
         border: none;
+        margin-top: 10px;
         color: #FFFF;
         width: 82px;
         height: 24px;
         background-color: #E66767;
         font-size: 14px;
-        font-weight: bold;
         font-family: 'Roboto';
         cursor: pointer;
     }
