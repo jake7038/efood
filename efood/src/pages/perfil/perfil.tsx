@@ -10,7 +10,9 @@ export const Perfil = () => {
         <HeaderPerfil/>
         <S.Container>
             <S.Banner>
-                
+                <h3>Italiana</h3>
+
+                <p>La Dolce Vita Trattoria</p>
 
             </S.Banner>
             <S.DivGrid>

@@ -25,9 +25,43 @@ export const DivGrid = styled.div`
 `
 
 export const Banner = styled.div`
+    position: relative;
     min-width: 1366px;
     min-height: 280px;
-    background-image: url("/assets/apresentacao.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url("/assets/comida2.png") center/cover no-repeat;
+    padding: 12px 0 12px 15%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+
+    &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 0;
+    }
+
+    h3 {
+    position: relative;
+    z-index: 1;
+    font-family: Roboto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.7);
+    font-variation-settings: "wght" 100;
+    }
+
+    p{
+    font-family: Roboto;
+    font-weight: 900;
+    font-style: Black;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    z-index: 1;
+    }
 `
