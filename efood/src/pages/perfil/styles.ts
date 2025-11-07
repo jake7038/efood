@@ -22,6 +22,7 @@ export const DivGrid = styled.div`
     padding-top: 40px;
     padding-left: 20%;
     padding-right: 20%;
+    
 `
 
 export const Banner = styled.div`
@@ -34,6 +35,17 @@ export const Banner = styled.div`
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
+    padding-left:20%;
+    padding-right: 20%;
+
+    @media (max-width: 1024px) {
+    padding-left: 10%;
+    padding-right: 10%;
+    } 
+    @media (max-width: 768px) {
+    padding-left: 5%;
+    padding-right: 5%;
+    }
 
     &::before {
     content: "";

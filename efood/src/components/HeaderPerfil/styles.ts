@@ -14,6 +14,8 @@ export const Header = styled.header`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
     img{
         text-align: center;
         
@@ -30,6 +32,15 @@ export const Header = styled.header`
         text-align: right;
         color: #E66767;
         cursor: pointer;
+    }
+    @media (max-width: 1024px) {
+    padding: 30px 10%;
+    } 
+    @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    padding: 20px 8%;
     }
 
 `
