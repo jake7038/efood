@@ -18,19 +18,23 @@ export const DivGrid = styled.div`
     align-items: start;
     justify-items: start; 
     justify-content: space-between; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));   
+    grid-template-columns: repeat(3, auto);
     gap:24px;
     padding-top: 40px;
-    padding-left: 20%;
-    padding-right:20%;
+    padding-left: 12%;
+    padding-right:12%;
     @media (max-width: 1024px) {
     padding-left: 8%;
     padding-right: 8%;
     } 
     @media (max-width: 768px) {
     padding-left: 0%;
+    width: auto;
     padding-right: 0%;
     justify-items: center; 
+    align-items: center;
+    justify-content: center; 
+    grid-template-columns: repeat(1, auto);
     }
     
 `
@@ -45,8 +49,8 @@ export const Banner = styled.div`
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 12%;
+    padding-right: 12%;
 
     @media (max-width: 1024px) {
     padding-left: 8%;

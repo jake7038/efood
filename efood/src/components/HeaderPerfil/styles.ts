@@ -11,8 +11,8 @@ export const Header = styled.header`
     display: grid;
     grid-template-columns: 1fr auto 1fr; 
     align-items: center;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
     
     img{
         text-align: center;
