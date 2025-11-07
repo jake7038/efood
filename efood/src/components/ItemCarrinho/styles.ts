@@ -47,7 +47,33 @@ export const Div = styled.div`
         font-weight: 400;
         }
     }
-    
+    @media (max-width: 768px) {
+    width: 260px;
+    height: 280px;
+
+        img {
+        width: 240px;
+        height: 132px;
+        }
+
+        div {
+        width: 240px;
+        font-size: 14px;
+
+        h2 {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        button {
+            min-height: 20px;
+            font-size: 13px;
+        }
+        }
+    }
     
 
 `
