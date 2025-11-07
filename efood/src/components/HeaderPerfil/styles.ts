@@ -1,27 +1,26 @@
 import styled from 'styled-components'
 
 export const Header = styled.header`
-    width: 100%;
+    width: auto;
     box-sizing: border-box;
     padding: 40px 160px 40px 160px;
     overflow-x: none;
     background-image:  url("assets/fundo.png");
     color: red;
     top:0;
-    display: flex;
-    justify-content: center;   
-    align-items: center; 
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; 
     align-items: center;
     padding-left: 20%;
     padding-right: 20%;
+    
     img{
         text-align: center;
         
         width: 125px;
     }
     p{
+        justify-self: start;
         margin: 0px;
         font-family: Roboto;
         font-weight: 900;
@@ -32,6 +31,9 @@ export const Header = styled.header`
         text-align: right;
         color: #E66767;
         cursor: pointer;
+    }
+    .contador{
+        justify-self: end;
     }
     @media (max-width: 1024px) {
     padding: 30px 10%;
