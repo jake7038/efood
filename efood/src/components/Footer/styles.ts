@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Footer = styled.header`
-    width: 100vw;
+    width: auto;
     gap: 16px;
     padding-top: 20px;
     background-color: #FFEBD9;
@@ -10,6 +10,7 @@ export const Footer = styled.header`
     justify-content: center;   
     align-items: center; 
     flex-direction: column;
+    overflow-x: none;
     >img{
         width: 125px;
     }

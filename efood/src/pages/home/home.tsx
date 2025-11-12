@@ -1,7 +1,5 @@
 import * as S from "./styles"
 import { useState } from 'react'
-import { Header } from "../../components/Header/Header"
-import { Footer } from "../../components/Footer/Footer"
 import { DivItem } from "../../components/Item/Item"
 import type { Item } from "../../types/item"
 
@@ -16,7 +14,7 @@ export const Home = () => {
     
     return(
         <>
-            <Header/>
+            
             <S.Container>
                 <S.DivGrid>
                 {itens.map((item, index) => (
@@ -24,7 +22,6 @@ export const Home = () => {
                 ))}
                 </S.DivGrid>
             </S.Container>
-            <Footer/>
         </>
                 
 
