@@ -1,18 +1,26 @@
 import styled from 'styled-components'
 
 export const Header = styled.header`
-    width: auto;
+    width: 100%;
     box-sizing: border-box;
-    padding: 40px 160px 40px 160px;
+    padding: 40px 0px 40px 0px;
     overflow-x: none;
     background-image:  url("assets/fundo.png");
     color: red;
     top:0;
+    display: flex;
+    justify-content: center;
+    
+    div{
     display: grid;
     grid-template-columns: 1fr auto 1fr; 
     align-items: center;
     padding-left: 10%;
     padding-right:10%;
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+    }
     img{
         text-align: center;
         

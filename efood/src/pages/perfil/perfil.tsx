@@ -36,19 +36,25 @@ export const Perfil = () => {
         
         <S.Container>
             <S.Banner>
-                <h3>Italiana</h3>
+                <div>
+                    <h3>Italiana</h3>
 
-                <p>La Dolce Vita Trattoria {teste[0]?.titulo}</p>
+                    <p>La Dolce Vita Trattoria {teste[0]?.titulo}</p>
+                </div>
+                
 
             </S.Banner>
-            <S.DivGrid>
-                <ItemCarrinho/>
-                <ItemCarrinho/>
-                <ItemCarrinho/>
-                <ItemCarrinho/>
-                <ItemCarrinho/>
-                <ItemCarrinho/>
-            </S.DivGrid>
+            <S.GridBackground>
+                <S.DivGrid>
+                    <ItemCarrinho/>
+                    <ItemCarrinho/>
+                    <ItemCarrinho/>
+                    <ItemCarrinho/>
+                    <ItemCarrinho/>
+                    <ItemCarrinho/>
+                </S.DivGrid>
+            </S.GridBackground>
+            
         </S.Container>
         
     </>
