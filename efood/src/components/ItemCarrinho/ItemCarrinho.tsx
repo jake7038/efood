@@ -1,15 +1,19 @@
 import * as S from "./styles"
+import type { Item } from "../../types/item"
+export const ItemCarrinho = ({item, onClickMoreDetails}: {item: Item, onClickMoreDetails: () => void}) => {
 
-export const ItemCarrinho = () => {
+    const getDescricao = (item.descricao.length > 160? item.descricao.slice(0,157) + '...' : item.descricao)
+    
+
     return(
         <S.Div>
-            <img src="/assets/image 3.png" alt="" />
+            <img src={item.foto} alt="" />
             <div>
-                <h2> Pizza Marguerita </h2>
+                <h2> {item.nome} </h2>
                 <p>
-                    A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!
+                    {getDescricao}
                 </p>
-                <button>Adicionar ao carrinho</button>
+                <button onClick={onClickMoreDetails}>Mais detalhes</button>
             </div>
         </S.Div>
     )

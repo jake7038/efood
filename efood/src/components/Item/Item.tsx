@@ -1,32 +1,30 @@
 import * as S from "./styles"
 import { useNavigate } from 'react-router-dom';
-import type { Item as Itemprops } from "../../types/item"
+import type { Restaurante } from "../../types/restaurante";
 
 
-
-export const DivItem = ({ item }: { item: Itemprops }) => {
+export const DivItem = ({ item }: { item: Restaurante }) => {
     
     const nav = useNavigate();
 
     const navegacao = () => {
-        nav('/perfil');
+        nav(`/perfil/${item.id}`);
     };
     
     return(
         <S.Div>
-            <S.DivImg imageUrl={item.url}>
+            <S.DivImg imageUrl={item.capa}>
                 <S.DivAbsolute>
-                    {item.tags.map((tag, index) => (
-                        <S.retangulo key={index}>
-                        <p> {tag} </p>
+                        <S.retangulo>
+                        <p> {item.tipo} </p>
                         </S.retangulo>
-                    ))}
+
                 </S.DivAbsolute>
                 
             </S.DivImg>
             <S.DivContent>
                 <S.DivFlexTitulo>
-                    <div> {item.nome}  </div> <div> {item.nota+ " "} <img src="/assets/estrela.png" alt="" /> </div>
+                    <div> {item.titulo}  </div> <div> {item.avaliacao+ " "} <img src="/assets/estrela.png" alt="" /> </div>
                 </S.DivFlexTitulo>
                 <p>
                     {item.descricao}

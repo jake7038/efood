@@ -1,7 +1,8 @@
 export type Item = {
+    foto: string;
+    preco: number;
+    id: number;
     nome: string;
     descricao: string;
-    url: string;
-    nota: number;
-    tags: string[];
+    porcao: string;
     };
