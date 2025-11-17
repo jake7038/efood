@@ -10,7 +10,7 @@ export const Div = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: #E66767;
-    text-align: start;
+    
 
     img{
         width: 304px;
