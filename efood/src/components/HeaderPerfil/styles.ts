@@ -4,8 +4,7 @@ export const Header = styled.header`
     width: auto;
     box-sizing: border-box;
     padding: 40px 160px 40px 160px;
-    overflow-x: none;
-    background-image:  url("assets/fundo.png");
+    background-image: url("/assets/fundo.png");
     color: red;
     top:0;
     display: grid;
