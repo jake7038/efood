@@ -11,36 +11,18 @@ export const Container = styled.div`
 `
 
 
-export const GridBackground = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-`
-
 export const DivGrid = styled.div`
     display: grid;
-    align-items: center;
-    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+    align-items: start;
+    justify-items: start; 
+    justify-content: space-between; 
+    grid-template-columns: repeat(3, auto);
     gap:24px;
     padding-top: 40px;
-    padding-left: 10%;
-    padding-right:10%;
-    width:100%;
-    max-width: 1440px;
-    box-sizing: border-box;
-    & > :nth-child(3n + 1) {
-    justify-self: start;
-    }
-
-    & > :nth-child(3n + 2) {
-    justify-self: center;
-    }
-
-    & > :nth-child(3n + 3) {
-    justify-self: end;
-    }
-    
+    padding-left: 12%;
+    padding-right:12%;
     @media (max-width: 1024px) {
     padding-left: 8%;
     padding-right: 8%;
@@ -59,24 +41,17 @@ export const DivGrid = styled.div`
 
 export const Banner = styled.div`
     position: relative;
+    min-width: 1366px;
     min-height: 280px;
     background: url("/assets/comida2.png") center/cover no-repeat;
-    padding: 12px 0;
+    padding: 12px 0 12px 15%;
     overflow: hidden;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    
-
-    div{
-    max-width: 1440px;
-    width: 100%;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
-    padding-left: 10%;
-    padding-right:10%;
+    padding-left: 12%;
+    padding-right: 12%;
+
     @media (max-width: 1024px) {
     padding-left: 8%;
     padding-right: 8%;
@@ -85,6 +60,15 @@ export const Banner = styled.div`
     padding-left: 0%;
     padding-right: 0%;
     }
+
+    &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 0;
+    }
+
     h3 {
     position: relative;
     z-index: 1;
@@ -106,17 +90,4 @@ export const Banner = styled.div`
     color: #FFFFFF;
     z-index: 1;
     }
-    }
-
-    
-
-    &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5); 
-    z-index: 0;
-    }
-
-    
 `

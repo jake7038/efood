@@ -6,7 +6,7 @@ export const ModalItem = ({ item, onClose }: { item: Item, onClose: () => void }
     return(
         <S.Overlay>
             <S.Retangulo>
-                <img onClick={onClose} src="/public/assets/close.png" alt="" />
+                <img onClick={onClose} src="/assets/close.png" alt="" />
                 <S.ConteudoGrid>
                     <img src={item.foto} alt="" />
                     <S.Conteudo>
