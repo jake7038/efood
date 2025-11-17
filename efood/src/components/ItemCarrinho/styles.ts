@@ -25,6 +25,9 @@ export const Div = styled.div`
         font-size: 16px;
         line-height: 100%;
         letter-spacing: 0%;
+        display: flex; 
+        flex-direction: column;
+        height: 100%;  
         button{
             border:none;
             color: #E66767;
@@ -33,6 +36,8 @@ export const Div = styled.div`
             font-weight: 700;
             cursor: pointer;
             min-height: 24px;
+            margin-top: auto;
+            margin-bottom: auto;
         }
         h2{
         text-align: start;

@@ -4,15 +4,20 @@ import { ItemCarrinho } from "../../components/ItemCarrinho/ItemCarrinho"
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectRestaurantes } from "../../redux/selectorsRestaurante";
+import { ModalItem } from "../../components/modalItem/modalItem"
 import type { Restaurante } from "../../types/restaurante";
-import type { Item } from "../../types/item"
 import * as S from "./styles"
+import { useState } from "react";
+import type { Item } from "../../types/item";
 
 export const Perfil = () => {
+
+    const [modalItem, setModalItem] = useState<Item | null>(null);
+
     const { id } = useParams();
     const restaurantes: Restaurante[] = useSelector(selectRestaurantes);
     const restaurante = restaurantes.find(r => r.id === Number(id));
-    
+
     return(
     <>
         <HeaderPerfil/>
@@ -25,11 +30,14 @@ export const Perfil = () => {
             </S.Banner>
             <S.DivGrid>
                 {restaurante?.cardapio.map((item, index) =>
-                    <ItemCarrinho item={item} key={index} />
+                    <ItemCarrinho  item={item} key={index} onClickMoreDetails={() => setModalItem(item)} />
                 )}
             </S.DivGrid>
         </S.Container>
         <Footer/>
+        {modalItem && (
+        <ModalItem item={modalItem}  onClose={() => setModalItem(null)}/>
+        )}
     </>
 
     )

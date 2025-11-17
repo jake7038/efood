@@ -1,9 +1,9 @@
 import * as S from "./styles"
 import type { Item } from "../../types/item"
+export const ItemCarrinho = ({item, onClickMoreDetails}: {item: Item, onClickMoreDetails: () => void}) => {
 
-export const ItemCarrinho = ({item}: {item: Item}) => {
-    const getDescricao = (item.descricao.length > 130? item.descricao.slice(0,127) + '...' : item.descricao)
-
+    const getDescricao = (item.descricao.length > 160? item.descricao.slice(0,157) + '...' : item.descricao)
+    
 
     return(
         <S.Div>
@@ -13,7 +13,7 @@ export const ItemCarrinho = ({item}: {item: Item}) => {
                 <p>
                     {getDescricao}
                 </p>
-                <button>Adicionar ao carrinho</button>
+                <button onClick={onClickMoreDetails}>Mais detalhes</button>
             </div>
         </S.Div>
     )
