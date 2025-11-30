@@ -1,5 +1,6 @@
 import * as S from "./styles"
 import type { Item } from "../../types/item"
+
 export const ItemCarrinho = ({item, onClickMoreDetails}: {item: Item, onClickMoreDetails: () => void}) => {
 
     const getDescricao = (item.descricao.length > 160? item.descricao.slice(0,157) + '...' : item.descricao)

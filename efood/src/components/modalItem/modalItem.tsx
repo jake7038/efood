@@ -1,8 +1,10 @@
 import * as S from "./styles"
 import type { Item } from "../../types/item"
+import { adicionarItem } from "../../redux/sliceCarrinho"
+import { useDispatch  } from "react-redux"
 
 export const ModalItem = ({ item, onClose }: { item: Item, onClose: () => void }) => {
-    
+        const dispatch = useDispatch();
     return(
         <S.Overlay>
             <S.Retangulo>
@@ -18,7 +20,7 @@ export const ModalItem = ({ item, onClose }: { item: Item, onClose: () => void }
                                 <p>Serve: {item.porcao}</p>
                             </>
                             
-                            <button>Adicionar ao carrinho - R$ {item.preco}</button>
+                            <button onClick={() => dispatch(adicionarItem(item))}>Adicionar ao carrinho - R$ {item.preco}</button>
                     </S.Conteudo>
                 </S.ConteudoGrid>
                 

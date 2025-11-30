@@ -1,4 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice} from "@reduxjs/toolkit";
+
 
 const restaurantesSlice = createSlice({
     name: "restaurantes",
@@ -24,9 +25,6 @@ const restaurantesSlice = createSlice({
 });
 
 export const {
-    fetchRestaurantesStart,
-    fetchRestaurantesSuccess,
-    fetchRestaurantesError,
-} = restaurantesSlice.actions;
+    fetchRestaurantesStart, fetchRestaurantesSuccess, fetchRestaurantesError} = restaurantesSlice.actions;
 
 export default restaurantesSlice.reducer;
