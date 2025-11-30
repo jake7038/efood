@@ -22,6 +22,7 @@ export const Retangulo = styled.div`
     display: flex;
     flex-direction: column;
     color: #ffff;
+    overflow-y: auto;
     button{
             align-self: center;
             border:none;
@@ -53,4 +54,52 @@ export const ValorTotal = styled.div`
     letter-spacing: 0%;
     text-align: center;
     color: #ffff;
+`
+
+
+export const Item = styled.div`
+    display: grid;
+    grid-template-columns: 35%  65%;
+    background-color: #FFEBD9;
+    margin: 6px 12px;
+    width: 342px;
+    gap: 4px;
+    img{
+        align-self: center;
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        margin: 0px 8px;
+    }
+    div{
+        color: #E66767;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        
+        text-align: start;
+        padding: 0px 8px;
+        h4{
+        font-family: Roboto;
+        font-weight: 900;
+        font-style: Black;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        }
+        p{
+        font-family: Roboto;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0%;
+        margin-top: 0px;
+        }
+        img{
+            width: 16px;
+            margin-left: auto;
+            cursor: pointer;
+        }
+    }
 `
