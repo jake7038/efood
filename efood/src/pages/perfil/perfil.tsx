@@ -24,7 +24,7 @@ export const Perfil = () => {
     <>
         <HeaderPerfil openModal={setModalCarrinho} />
         <S.Container>
-            <S.Banner  >
+            <S.Banner urlimage={restaurante?.capa} >
                 <h3>{restaurante?.tipo}</h3>
 
                 <p>{restaurante?.titulo}</p>
