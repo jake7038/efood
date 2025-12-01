@@ -39,11 +39,11 @@ export const DivGrid = styled.div`
     
 `
 
-export const Banner = styled.div`
+export const Banner = styled.div<{urlimage?: string} >`
     position: relative;
     min-width: 1366px;
     min-height: 280px;
-    background: url("/assets/comida2.png") center/cover no-repeat;
+    background: url(${props => props.urlimage}) center/cover no-repeat;
     padding: 12px 0 12px 15%;
     overflow: hidden;
     display: flex;
