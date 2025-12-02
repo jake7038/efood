@@ -244,3 +244,44 @@ export const Payment = styled.form`
         margin-top: 8px;
     }
 `
+
+export  const Order = styled.div`
+    color: #FFEBD9;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+
+    h4{
+    font-family: Roboto;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 8px 0px 16px 0px;
+    }
+    p{
+        font-family: Roboto;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0%;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    button{
+        min-height: 24px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-top: 8px;
+        border:none;
+        color: #E66767;
+        width: 100%;
+        background-color: #FFEBD9;
+        font-weight: 700;
+        
+        cursor: pointer;
+        
+    }
+`

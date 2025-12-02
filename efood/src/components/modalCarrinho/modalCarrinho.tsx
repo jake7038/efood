@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import * as S from "./styles"
 import { selectItensCarrinho, selectValorTotal } from "../../redux/selectorsCarrinho";
 import { useDispatch } from "react-redux";
-import { removerItem } from "../../redux/sliceCarrinho";
+import { removerItem, limparCarrinho } from "../../redux/sliceCarrinho";
 import { useState } from "react";
 import type { Products } from "../../types/product";
 import type { Payment } from "../../types/payment";
@@ -12,10 +12,13 @@ export const ModalCarrinho = ({ closeModal }: {  closeModal: (val: boolean) => v
     const [isInCar, setIsInCar] = useState(true)
     const [isInAddress, setIsInAddress] = useState(false)
     const [isInPayment, setIsInPayment] = useState(false)
+    const [isInOrder, setIsInOrder] = useState(false)
+
 
     const [products, setProducts] = useState<Products | null>(null)
     const [delivery, setDelivery] = useState<Delivery | null>(null)
-    const [payment, setPayment] = useState<Payment | null>(null)
+
+    const[orderID, setOrderID] = useState(null)
 
     const [modalDelivery, setModalDelivery] = useState({
         receiver: "",
@@ -44,8 +47,14 @@ export const ModalCarrinho = ({ closeModal }: {  closeModal: (val: boolean) => v
             setIsInAddress(true)
         }else{
             if(isInPayment){
+                if(isBack){
                 setIsInPayment(false)
                 setIsInAddress(true)
+                }else{
+                    setIsInPayment(false)
+                    setIsInOrder(true)
+                }
+                
             }else{
             if(isInAddress){
                 if(isBack){
@@ -55,7 +64,12 @@ export const ModalCarrinho = ({ closeModal }: {  closeModal: (val: boolean) => v
                     setIsInAddress(false)
                     setIsInPayment(true)
                 }
-            }
+            }else{
+            setIsInOrder(false)
+            closeModal(false)
+            } 
+            
+
             }
             
         }
@@ -91,7 +105,7 @@ export const ModalCarrinho = ({ closeModal }: {  closeModal: (val: boolean) => v
         setDelivery(Delivery)
         changeModal(false)
     }
-    const savePayment = () => {
+    const savePayment = async () => {
         
         const Payment: Payment = {
         card : {
@@ -104,12 +118,41 @@ export const ModalCarrinho = ({ closeModal }: {  closeModal: (val: boolean) => v
             year: Number(modalPayment.year)
         }
         }
-        setPayment(Payment)
-        
+        return Payment
     }
 
-    const SendRequisition= () => {
+    const SendRequisition= async () => {
         
+        const payment = await savePayment()
+        const body = {
+            products,
+            delivery,
+            payment
+        }
+        try {
+        const res = await fetch("https://api-ebac.vercel.app/api/efood/checkout", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
+        });
+        const { orderId } = await res.json();
+        setOrderID(orderId)
+        changeModal(false)
+        console.log(orderId)
+    }catch(e){
+        console.error(e);
+    }
+
+    }
+
+    const cleanCar = () => {
+        setProducts(null)
+        setDelivery(null)
+        setOrderID(null)
+        dispatch(limparCarrinho())
+        changeModal()
     }
 
     return(
@@ -209,10 +252,22 @@ export const ModalCarrinho = ({ closeModal }: {  closeModal: (val: boolean) => v
                             </div>  
                         </div>
                         <div className="buttonsDiv">
-                            <button type="button" onClick={() => savePayment()} >Finalizar pagamento</button>
-                            <button type="button" onClick={() => changeModal()}>Voltar para a edição de endereço</button>
+                            <button type="button" onClick={() => SendRequisition()} >Finalizar pagamento</button>
+                            <button type="button" onClick={() => changeModal(true)}>Voltar para a edição de endereço</button>
                         </div>
                     </S.Payment>
+                )}
+                {isInOrder && (
+                    <S.Order>
+                        <h4>Pedido realizado - {orderID}</h4>
+                        
+                        <p>Estamos felizes em informar que seu pedido já está em processo de preparação e, em breve, será entregue no endereço fornecido. </p>    
+                        <p>Gostaríamos de ressaltar que nossos entregadores não estão autorizados a realizar cobranças extras.</p>     
+                        <p>Lembre-se da importância de higienizar as mãos após o recebimento do pedido, garantindo assim sua segurança e bem-estar durante a refeição. </p>    
+                        <p>Esperamos que desfrute de uma deliciosa e agradável experiência gastronômica. Bom apetite!</p>    
+
+                        <button onClick={() => cleanCar()}>Concluir</button>
+                    </S.Order>
                 )}
 
             </S.Retangulo>
