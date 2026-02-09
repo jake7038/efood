@@ -18,8 +18,9 @@ export const Perfil = () => {
 
     const { id } = useParams();
     const restaurantes: Restaurante[] = useSelector(selectRestaurantes);
-    const restaurante = restaurantes.find(r => r.id === Number(id));
+    const restaurante = restaurantes.find(item => item.id === Number(id));
     
+
     return(
     <>
         <HeaderPerfil openModal={setModalCarrinho} />
